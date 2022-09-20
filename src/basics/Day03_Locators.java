@@ -1,5 +1,7 @@
 package basics;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -27,6 +29,26 @@ public class Day03_Locators {
 		boat.click();
 		// can also do it like below
 		// driver.findElement(By.id("username")).sendKeys("maricruz");
+		driver.findElement(By.linkText("Alerts")).click();
+		driver.findElement(By.partialLinkText("Practice")).click();
+		List<WebElement> links = driver.findElements(By.tagName("a"));
+		int numberOfLinks = links.size();
+		System.out.println(numberOfLinks);
+		// task click on alerts find number of button tag
+		driver.findElement(By.linkText("Alerts")).click();
+		List<WebElement> buttons = driver.findElements(By.tagName("button"));
+		int numberOfButtons = buttons.size();
+		System.out.println(numberOfButtons);
+		driver.findElement(By.className("dropdownLink")).click();
+		
+		//full xpath or absolute xpath
+		List<WebElement> menuLinks = driver.findElements(By.xpath("/html/body/nav/div/a"));
+		System.out.println(menuLinks.size());
+		
+		
+		
+		
+		
 
 	}
 
