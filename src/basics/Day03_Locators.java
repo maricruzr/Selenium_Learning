@@ -10,7 +10,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Day03_Locators {
 
 	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver","D:\\downloads\\jar_files07\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver",
+				"D:\\downloads\\jar_files07\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://codegator.herokuapp.com/input_fields.php");
 		WebElement username_field = driver.findElement(By.id("username"));
@@ -40,15 +41,10 @@ public class Day03_Locators {
 		int numberOfButtons = buttons.size();
 		System.out.println(numberOfButtons);
 		driver.findElement(By.className("dropdownLink")).click();
-		
-		//full xpath or absolute xpath
+
+		// full xpath or absolute xpath
 		List<WebElement> menuLinks = driver.findElements(By.xpath("/html/body/nav/div/a"));
 		System.out.println(menuLinks.size());
-		
-		
-		
-		
-		
 
 	}
 
